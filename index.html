@@ -1,139 +1,141 @@
-<!-- Updated single-file portfolio for Darshan Soni with live contact details and resume link -->
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Darshan Soni — Mobile & Backend Developer</title>
-  <meta name="description" content="Darshan Soni — Flutter & Node.js developer focused on IoT and real-time systems">
-  <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#9aa4b2;--glass:rgba(255,255,255,0.03)}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#071226 0%, #0b1520 100%);color:#e6eef6;line-height:1.5}
-    .wrap{max-width:980px;margin:40px auto;padding:24px}
-    header{display:flex;align-items:center;gap:16px}
-    .avatar{width:80px;height:80px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#021022}
-    h1{margin:0;font-size:24px}
-    p.lead{margin:6px 0 0;color:var(--muted)}
-    .row{display:flex;gap:24px;margin-top:24px}
-    .col{flex:1}
-    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    .project h3{margin:0 0 8px 0}
-    .small{font-size:13px;color:var(--muted)}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .tag{background:var(--glass);padding:6px 8px;border-radius:8px;font-size:13px;color:var(--muted)}
-    a.button{display:inline-block;background:var(--accent);color:#021022;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
-    .contact{display:flex;flex-direction:column;gap:8px}
-    .meta{display:flex;gap:12px;align-items:center}
-    @media(max-width:720px){.row{flex-direction:column}.projects{grid-template-columns:1fr}.avatar{width:64px;height:64px;font-size:22px}}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Darshan Soni — Mobile & Backend Engineer</title>
+  <meta name="description" content="Darshan Soni — Full stack mobile app & IoT engineer. Flutter, Node.js, AWS, MQTT, real-time streaming and IoT dashboards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Replace below with your resume path inside repo once uploaded -->
+  <meta property="og:title" content="Darshan Soni — Mobile & Backend Engineer">
+  <meta property="og:description" content="Flutter + Node.js developer — built IoT dashboards, live streaming with kinesis, BLE & NMEA2000 systems.">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="avatar">DS</div>
-      <div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
         <h1>Darshan Soni</h1>
-        <p class="lead">Mobile & Backend Developer — Architecting IoT & Real‑Time Systems<br><span class="small">Flutter • Node.js • Socket.IO • MQTT • AWS • GetX • MongoDB</span></p>
+        <p class="subtitle">Mobile & Backend Engineer — Flutter · Node.js · IoT · Real-time Systems</p>
       </div>
-    </header>
-
-    <div class="row" style="margin-top:22px">
-      <div class="col">
-        <div class="card">
-          <h2 style="margin:0 0 6px 0">About</h2>
-          <p class="small">I build connected experiences that take data from sensors and turn it into meaningful, real‑time interfaces. I’ve owned projects end‑to‑end — architecture, backend APIs, mobile apps, CI/CD and monitoring. I enjoy solving problems where hardware and software meet.</p>
-
-          <div style="margin-top:12px" class="meta">
-            <div style="flex:1">
-              <div class="small">Location</div>
-              <div>India (Remote-ready)</div>
-            </div>
-            <div style="flex:1">
-              <div class="small">Availability</div>
-              <div>Immediate / Negotiable notice</div>
-            </div>
-          </div>
-
-          <div style="margin-top:12px" class="contact">
-            <a class="button" href="mailto:darshansoni865@gmail.com">Email</a>
-            <div class="small">Resume: <a href="Darshan_Soni_Software_Enginner.pdf" style="color:var(--accent);text-decoration:none">Download PDF</a></div>
-            <div style="margin-top:8px">
-              <a href="https://www.linkedin.com/in/darshan-soni-software-engineer/" target="_blank" style="color:var(--muted);text-decoration:none">LinkedIn</a> &nbsp; • &nbsp; <a href="https://github.com/darshansoni09" target="_blank" style="color:var(--muted);text-decoration:none">GitHub</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="margin-top:16px">
-          <h2 style="margin:0 0 6px 0">Featured Projects</h2>
-          <div class="projects" style="margin-top:10px">
-            <div class="project">
-              <h3>Boat Surveillance & Live Tracking</h3>
-              <div class="small">Flutter • Node.js • Socket.IO • MongoDB</div>
-              <p class="small" style="margin-top:8px">Built end‑to‑end mobile & backend. Dynamic JSON-driven dashboard for wired & wireless sensors; migrated from polling to real‑time, reducing latency and server load.</p>
-            </div>
-
-            <div class="project">
-              <h3>AWS Kinesis Live Streaming</h3>
-              <div class="small">Node.js • AWS Kinesis • WebRTC</div>
-              <p class="small" style="margin-top:8px">Integrated camera streams from IoT devices into a low‑latency web playback. Independent research and prototyping turned a stalled project into production feature.</p>
-            </div>
-
-            <div class="project">
-              <h3>NMEA 2000 Dynamic Dashboard</h3>
-              <div class="small">Flutter • Node.js • JSON Schema</div>
-              <p class="small" style="margin-top:8px">Converted hundreds of PGNs into a JSON schema for dynamic UI rendering — future proofed the dashboard and cut dev time significantly.</p>
-            </div>
-
-            <div class="project">
-              <h3>BLE Configuration Tool</h3>
-              <div class="small">Flutter • Bluetooth</div>
-              <p class="small" style="margin-top:8px">Built BLE pairing, retries and OTA-like configuration workflows for field devices.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col">
-        <div class="card">
-          <h2 style="margin:0 0 6px 0">Skills & Tools</h2>
-          <div class="tags">
-            <div class="tag">Flutter / Dart</div>
-            <div class="tag">Node.js</div>
-            <div class="tag">Socket.IO</div>
-            <div class="tag">MQTT</div>
-            <div class="tag">AWS</div>
-            <div class="tag">GetX</div>
-            <div class="tag">MongoDB</div>
-            <div class="tag">CI/CD</div>
-            <div class="tag">i18n</div>
-          </div>
-
-          <div style="margin-top:12px">
-            <h3 style="margin:6px 0">Impact Stories</h3>
-            <ul class="small" style="padding-left:18px;margin-top:6px">
-              <li>Reduced server polling to sockets — cut load by ~70%.</li>
-              <li>Designed dynamic sensor model saving 80% future effort.</li>
-              <li>Delivered AWS Kinesis streaming feature independently.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card" style="margin-top:16px">
-          <h2 style="margin:0 0 6px 0">Contact</h2>
-          <p class="small">For recruiters: please find my resume and links above. I’m available for immediate interviews and open to discussing compensation and start date.</p>
-          <div style="margin-top:12px" class="small">Preferred contact: <a href="mailto:darshansoni865@gmail.com" style="color:var(--accent);text-decoration:none">darshansoni865@gmail.com</a></div>
-        </div>
-      </div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <footer>
-      Built by Darshan Soni • Mobile & Backend Dev • © 2025
-    </footer>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h2>Hi — I'm Darshan</h2>
+          <p>I design and build production-grade mobile apps and backend systems for IoT and real-time use cases. Experienced in end-to-end delivery: architecture, development, deployment and monitoring.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">See projects</a>
+            <a class="btn" href="Darshan_Soni_Software_Enginner.pdf" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+          <ul class="quick-links">
+            <li><strong>Email:</strong> <a href="mailto:darshansoni865@gmail.com">darshansoni865@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/darshan-soni-software-engineer/" target="_blank" rel="noopener">darshan-soni-software-engineer</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/darshansoni09" target="_blank" rel="noopener">darshansoni09</a></li>
+          </ul>
+        </div>
+        <div class="hero-right">
+          <div class="card">
+            <h3>Current snapshot</h3>
+            <p><strong>Experience:</strong> 3.5 years</p>
+            <p><strong>Focus:</strong> Flutter, Node.js, AWS, MQTT, WebSockets, BLE, NMEA2000</p>
+            <p><strong>Open to:</strong> Remote roles, ownership of mobile product from architecture → deployment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About</h3>
+      <p>I’ve built IoT & marine-specific solutions — live streaming using AWS Kinesis, boat surveillance dashboards with socket-based real-time updates, BLE device integrations, and a dynamic NMEA2000 parser/dashboard. I lead small teams and frequently own architecture, backend integration, and Flutter app delivery end-to-end.</p>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h3>Selected Projects</h3>
+
+      <article class="project">
+        <div class="project-left">
+          <h4>Marine Guardian — Live Streaming & Dashboard</h4>
+          <p>Built end-to-end solution to stream <strong>Boat live streaming using AWS Kinesis and WebRTC.</strong>  First the project marked as a <strong>Failure</strong>  then I took the <strong> ownership</strong> and asked to restart the project and the live streaming is working completely fine from the development.</p>
+          <p><strong>My work:</strong> Architecture, Node.js backend, Flutter app, deployment and monitoring.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-left">
+          <h4>Marine Guardian App (Sensors & BLE)</h4>
+          <p>Full app for boat sensor monitoring: combined wired sensors (up to 6) and flexible wireless sensors (1/2/4 up to 20). Dynamic dashboard driven by JSON schema, i18n, and socket updates from UDP/TCP streams. <strong>Developed from scratch.</strong></p>
+          <p><strong>Highlights:</strong> BLE for local sensors, <strong>socket-based real-time updates</strong>  replacing polling, handled multi IoT versions. Implemented <strong> MQTT for wireless sensor communication and connection with IOT device.</strong></p>
+           <p class="badges">
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.themarineguardiandashboard.app&hl=en_IN" target="_blank" rel="noopener">View Dashboard (Play Store)</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-left">
+          <h4>BLE Device Integration (IoT)</h4>
+          <p>Bluetooth Low Energy project — <strong>pairing, stable data communication</strong>, reconnection handling, and firmware data parsing. Designed a robust retry/backoff approach and background scanning logic for mobile. <strong>Handled BLE communication ease with 0 Experience in developing mobile application.</strong></p>
+          <p class="badges">
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.themarineguardian.app&hl=en_IN" target="_blank" rel="noopener">View BLE App (Play Store)</a>
+          </p>
+        </div>
+      </article>
+
+       <article class="project">
+  <div class="project-left">
+    <h4>NMEA 2000 Dynamic Data System</h4>
+    <p>
+      Built a <strong>dynamic IoT dashboard</strong> around the <strong>NMEA 2000 (N2K)</strong> protocol 
+      to decode and visualize <strong>PGN data</strong> from marine sensors in real time. 
+      Implemented <strong>JSON schema–based parsing</strong>, <strong>Socket.IO/MQTT</strong> updates, 
+      and multi-version support for wired and wireless systems.
+    </p>
   </div>
+</article>
+
+
+    </section>
+
+    <section id="skills" class="container skills">
+      <h3>Technical Skills</h3>
+      <ul class="skill-list">
+        <li>Mobile: Flutter, Dart, GetX (state management), Flutter i18n</li>
+        <li>Backend: Node.js, Express, REST APIs, WebSockets, Socket.IO</li>
+        <li>IoT & Realtime: MQTT, BLE, UDP/TCP packet handling, NMEA2000 (PGN parsing)</li>
+        <li>Cloud & DevOps: AWS (Kinesis, EC2)</li>
+        <li>DB: MongoDB, MySQL</li>
+        <li>Tools: Git/GitHub, Postman, Jira, Teams</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <p>If you’d like to review my code or discuss a role — contact me:</p>
+      <p><a class="btn primary" href="mailto:darshansoni865@gmail.com">Email darshansoni865@gmail.com</a></p>
+      <p class="muted">Resume, LinkedIn and GitHub links are at the top. I can share a private demo or quick screen share of projects on request.</p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Darshan Soni — Built with ❤️ · <a href="https://github.com/darshansoni09" target="_blank" rel="noopener">GitHub</a></small>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // small helpers
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
