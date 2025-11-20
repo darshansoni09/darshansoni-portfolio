@@ -6,20 +6,86 @@
   <title>Darshan Soni — Mobile & Backend Engineer</title>
   <meta name="description" content="Darshan Soni — Full stack mobile app & IoT engineer. Flutter, Node.js, AWS, MQTT, real-time streaming and IoT dashboards." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Replace below with your resume path inside repo once uploaded -->
-  <meta property="og:title" content="Darshan Soni — Mobile & Backend Engineer">
-  <meta property="og:description" content="Flutter + Node.js developer — built IoT dashboards, live streaming with kinesis, BLE & NMEA2000 systems.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --card: rgba(255,255,255,0.03);
+      --muted: #9fb0bb;
+      --muted-strong: #c8e6ea;
+      --accent-1: #06b6d4;
+      --accent-2: #0ea5a4;
+      --maxw:1100px;
+      --radius:12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:#e6f0f4;-webkit-font-smoothing:antialiased;line-height:1.6;font-size:15px}
+    .container{width:92%;max-width:var(--maxw);margin:0 auto;padding:40px 0}
+    header.site-header{position:relative;padding:12px 0}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#022}
+    .brand h1{margin:0;font-size:18px}
+    .subtitle{margin:0;color:var(--muted);font-size:13px}
+    nav.links{display:flex;gap:14px}
+    nav.links a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+    .cta{background:#fff;color:#000;padding:10px 14px;border-radius:10px}
+
+    .hero{padding:28px 0}
+    .hero-inner{display:flex;gap:28px;align-items:flex-start}
+    .hero-left{flex:1}
+    .eyebrow{color:var(--accent-1);font-weight:700;font-size:13px}
+    .hero-left h2{font-size:30px;margin:8px 0}
+    .hero-left p{color:var(--muted);max-width:720px}
+    .actions{display:flex;gap:12px;margin-top:12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);text-decoration:none;color:inherit;font-weight:700}
+    .btn.primary{background:linear-gradient(90deg,var(--accent-2),var(--accent-1));color:#022;border:none}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    .hero-right{width:320px}
+    .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.04);padding:16px;border-radius:12px}
+
+    /* Projects grid */
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:18px}
+    .project-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px;display:flex;gap:14px;align-items:flex-start;overflow:hidden}
+    .project-thumb{width:88px;height:88px;border-radius:10px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#022;font-size:18px;flex-shrink:0}
+    .project h4{margin:0 0 8px;color:var(--muted-strong)}
+    .project p{margin:6px 0;color:var(--muted);line-height:1.6}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .skill{background:rgba(255,255,255,0.02);padding:7px 10px;border-radius:999px;font-weight:700;color:var(--muted);font-size:13px}
+
+    /* Modal (overlay) */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,12,0.88);display:none;align-items:center;justify-content:center;padding:28px;z-index:9999}
+    .modal-backdrop.show{display:flex}
+    .modal-content{width:980px;max-width:calc(100% - 64px);background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.06);padding:20px;border-radius:12px;display:flex;gap:18px;max-height:85vh;overflow:hidden}
+    .modal-left{width:360px;flex-shrink:0;display:flex;flex-direction:column}
+    .modal-thumb{width:100%;height:220px;border-radius:8px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#022;font-size:22px}
+    .modal-links{margin-top:12px;display:flex;gap:10px}
+    .modal-meta{margin-top:12px;color:var(--muted);font-size:14px}
+    .modal-right{flex:1;overflow:auto;padding-right:8px}
+    .modal-header{display:flex;justify-content:space-between;align-items:flex-start}
+    .modal-close{background:transparent;border:none;color:var(--muted);font-size:20px;cursor:pointer}
+    .modal-desc{margin-top:10px;color:var(--muted-strong);line-height:1.7}
+    .modal-impact{margin-top:12px;color:var(--muted)}
+    .modal-extras{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+    body.modal-open{overflow:hidden}
+
+    @media (max-width:980px){.projects-grid{grid-template-columns:1fr}.modal-content{flex-direction:column}.modal-left{width:100%}.modal-thumb{height:180px}.modal-right{max-height:40vh}}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
+  <header class="site-header container" role="banner">
+    <div class="nav-inner">
       <div class="brand">
-        <h1>Darshan Soni</h1>
-        <p class="subtitle">Mobile & Backend Engineer — Flutter · Node.js · IoT · Real-time Systems</p>
+        <div class="logo">DS</div>
+        <div>
+          <h1>Darshan Soni</h1>
+          <p class="subtitle">Mobile & Backend Engineer — Flutter · Node.js · IoT</p>
+        </div>
       </div>
-      <nav class="links">
+      <nav class="links" role="navigation" aria-label="section links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -29,81 +95,118 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-inner">
+    <section class="hero container">
+      <div class="hero-inner">
         <div class="hero-left">
-          <h2>Hi — I'm Darshan</h2>
-          <p>I design and build production-grade mobile apps and backend systems for IoT and real-time use cases. Experienced in end-to-end delivery: architecture, development, deployment and monitoring.</p>
+          <div class="eyebrow">I build mobile products & realtime systems</div>
+          <h2>Hi — I'm Darshan. I design production-grade apps and backends for IoT, streaming & embedded systems.</h2>
+          <p>Experienced end-to-end: architecture, development, deployment and monitoring. I ship reliable Flutter apps, resilient Node.js services, and realtime IoT pipelines (MQTT, WebSockets, Kinesis).</p>
           <div class="actions">
             <a class="btn primary" href="#projects">See projects</a>
-            <a class="btn" href="Darshan_Soni_Software_Enginner.pdf" target="_blank" rel="noopener">Download Resume</a>
-          </div>
-          <ul class="quick-links">
-            <li><strong>Email:</strong> <a href="mailto:darshansoni865@gmail.com">darshansoni865@gmail.com</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/darshan-soni-software-engineer/" target="_blank" rel="noopener">darshan-soni-software-engineer</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/darshansoni09" target="_blank" rel="noopener">darshansoni09</a></li>
-          </ul>
-        </div>
-        <div class="hero-right">
-          <div class="card">
-            <h3>Current snapshot</h3>
-            <p><strong>Experience:</strong> 3.5 years</p>
-            <p><strong>Focus:</strong> Flutter, Node.js, AWS, MQTT, WebSockets, BLE, NMEA2000</p>
-            <p><strong>Open to:</strong> Remote roles, ownership of mobile product from architecture → deployment</p>
+            <a class="btn ghost" href="Darshan_Soni_Software_Enginner.pdf" target="_blank" rel="noopener">Download Resume</a>
+            <a class="btn" href="mailto:darshansoni865@gmail.com">Email</a>
           </div>
         </div>
+
+        <aside class="hero-right">
+          <div class="profile-card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div class="logo" style="width:64px;height:64px;border-radius:12px">DS</div>
+              <div>
+                <h3 style="margin:0">Darshan Soni</h3>
+                <p style="margin:6px 0 0;color:var(--muted)">3.5 years — Flutter | Node.js | MQTT | BLE | AWS</p>
+              </div>
+            </div>
+            <div style="margin-top:12px;color:var(--muted);font-size:14px">Architect & ship mobile apps, device integrations and realtime backends. Comfortable leading small teams and owning delivery.</div>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn ghost" href="#contact">Request demo</a>
+              <a class="btn" href="#projects">Projects</a>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
     <section id="about" class="container about">
       <h3>About</h3>
-      <p>I’ve built IoT & marine-specific solutions — live streaming using AWS Kinesis, boat surveillance dashboards with socket-based real-time updates, BLE device integrations, and a dynamic NMEA2000 parser/dashboard. I lead small teams and frequently own architecture, backend integration, and Flutter app delivery end-to-end.</p>
+      <p style="color:var(--muted)">I’ve built IoT & marine-specific solutions — live streaming using AWS Kinesis, boat surveillance dashboards with socket-based real-time updates, BLE device integrations, and a dynamic NMEA2000 parser/dashboard. I lead small teams and frequently own architecture, backend integration, and Flutter app delivery end-to-end.</p>
     </section>
 
     <section id="projects" class="container projects">
       <h3>Selected Projects</h3>
 
-      <article class="project">
-        <div class="project-left">
-          <h4>Marine Guardian — Live Streaming & Dashboard</h4>
-          <p>Built end-to-end solution to stream <strong>Boat live streaming using AWS Kinesis and WebRTC.</strong>  First the project marked as a <strong>Failure</strong>  then I took the <strong> ownership</strong> and asked to restart the project and the live streaming is working completely fine from the development.</p>
-          <p><strong>My work:</strong> Architecture, Node.js backend, Flutter app, deployment and monitoring.</p>
+      <div class="projects-grid">
+        <div class="project-card" data-project="kinesis">
+          <div class="project-thumb">KS</div>
+          <div>
+            <h4>AWS Kinesis Live Streaming + WebRTC (IoT Video Pipeline)</h4>
+            <p><strong>Role:</strong> Mobile Developer — <strong>Duration:</strong> 6 months</p>
+            <p style="color:var(--muted)">Converted a failed streaming project into a production-grade system with ~99% uptime.</p>
+            <div class="badges"><span class="skill">WebRTC</span><span class="skill">Kinesis</span><span class="skill">Realtime</span></div>
+            <div style="margin-top:12px"><a class="btn" href="#" data-open="kinesis">View details</a></div>
+          </div>
         </div>
-      </article>
 
-      <article class="project">
-        <div class="project-left">
-          <h4>Marine Guardian App (Sensors & BLE)</h4>
-          <p>Full app for boat sensor monitoring: combined wired sensors (up to 6) and flexible wireless sensors (1/2/4 up to 20). Dynamic dashboard driven by JSON schema, i18n, and socket updates from UDP/TCP streams. <strong>Developed from scratch.</strong></p>
-          <p><strong>Highlights:</strong> BLE for local sensors, <strong>socket-based real-time updates</strong>  replacing polling, handled multi IoT versions. Implemented <strong> MQTT for wireless sensor communication and connection with IOT device.</strong></p>
-           <p class="badges">
-            <a class="store" href="https://play.google.com/store/apps/details?id=com.themarineguardiandashboard.app&hl=en_IN" target="_blank" rel="noopener">View Dashboard (Play Store)</a>
-          </p>
+        <div class="project-card" data-project="ble">
+          <div class="project-thumb">BLE</div>
+          <div>
+            <h4>BLE Communication System for IoT Hardware</h4>
+            <p><strong>Role:</strong> Mobile App Developer — <strong>Duration:</strong> 3 months</p>
+            <p style="color:var(--muted)">Delivered a production-ready BLE stack with scanning, bonding, reconnection and resilient data streaming.</p>
+            <div class="badges"><span class="skill">BLE</span><span class="skill">Retries</span><span class="skill">Background Scan</span></div>
+            <div style="margin-top:12px"><a class="btn" href="#" data-open="ble">View details</a></div>
+          </div>
         </div>
-      </article>
 
-      <article class="project">
-        <div class="project-left">
-          <h4>BLE Device Integration (IoT)</h4>
-          <p>Bluetooth Low Energy project — <strong>pairing, stable data communication</strong>, reconnection handling, and firmware data parsing. Designed a robust retry/backoff approach and background scanning logic for mobile. <strong>Handled BLE communication ease with 0 Experience in developing mobile application.</strong></p>
-          <p class="badges">
-            <a class="store" href="https://play.google.com/store/apps/details?id=com.themarineguardian.app&hl=en_IN" target="_blank" rel="noopener">View BLE App (Play Store)</a>
-          </p>
+        <div class="project-card" data-project="dashboard">
+          <div class="project-thumb">MD</div>
+          <div>
+            <h4>TMG Dashboard App – Multi-Version IoT Integration</h4>
+            <p><strong>Role:</strong> Lead Mobile Developer — <strong>Duration:</strong> 1.5 years</p>
+            <p style="color:var(--muted)">One app supports three hardware generations with schema-driven parsing and real-time updates.</p>
+            <div class="badges"><span class="skill">MQTT</span><span class="skill">Socket.IO</span><span class="skill">Schema</span></div>
+            <div style="margin-top:12px"><a class="btn" href="#" data-open="dashboard">View details</a></div>
+          </div>
         </div>
-      </article>
 
-       <article class="project">
-  <div class="project-left">
-    <h4>NMEA 2000 Dynamic Data System</h4>
-    <p>
-      Built a <strong>dynamic IoT dashboard</strong> around the <strong>NMEA 2000 (N2K)</strong> protocol 
-      to decode and visualize <strong>PGN data</strong> from marine sensors in real time. 
-      Implemented <strong>JSON schema–based parsing</strong>, <strong>Socket.IO/MQTT</strong> updates, 
-      and multi-version support for wired and wireless systems.
-    </p>
-  </div>
-</article>
+        <div class="project-card" data-project="n2k">
+          <div class="project-thumb">N2K</div>
+          <div>
+            <h4>NMEA 2000 Dynamic Packet Parsing System (Marine Protocol)</h4>
+            <p><strong>Role:</strong> Senior Developer</p>
+            <p style="color:var(--muted)">Implemented a DB-driven PGN schema used by both mobile and backend for dynamic parsing.</p>
+            <div class="badges"><span class="skill">PGN</span><span class="skill">Protocol</span></div>
+            <div style="margin-top:12px"><a class="btn" href="#" data-open="n2k">View details</a></div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Modal -->
+      <div id="projectModal" class="modal-backdrop" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <div class="modal-left">
+            <div id="modalThumb" class="modal-thumb">IMG</div>
+            <div class="modal-links">
+              <a id="modalAndroid" class="btn primary" href="#" target="_blank" rel="noopener">Android</a>
+              <a id="modalIos" class="btn" href="#" target="_blank" rel="noopener">iOS</a>
+            </div>
+            <div class="modal-meta"><p id="modalTech"></p><p id="modalDuration"></p></div>
+          </div>
+
+          <div class="modal-right">
+            <div class="modal-header">
+              <div>
+                <h3 id="modalTitle"></h3>
+                <p id="modalRole" class="muted"></p>
+              </div>
+              <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+            </div>
+            <div id="modalDesc" class="modal-desc"></div>
+            <div id="modalImpact" class="modal-impact"></div>
+            <div id="modalExtras" class="modal-extras"></div>
+          </div>
+        </div>
+      </div>
 
     </section>
 
@@ -121,9 +224,11 @@
 
     <section id="contact" class="container contact">
       <h3>Contact</h3>
-      <p>If you’d like to review my code or discuss a role — contact me:</p>
-      <p><a class="btn primary" href="mailto:darshansoni865@gmail.com">Email darshansoni865@gmail.com</a></p>
-      <p class="muted">Resume, LinkedIn and GitHub links are at the top. I can share a private demo or quick screen share of projects on request.</p>
+      <p style="color:var(--muted)">If you’d like to review code, schedule a quick demo, or discuss a role — reach out.</p>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <a class="btn primary" href="mailto:darshansoni865@gmail.com">Email me</a>
+        <a class="btn" href="https://github.com/darshansoni09" target="_blank">GitHub</a>
+      </div>
     </section>
 
     <footer class="site-footer">
@@ -134,8 +239,88 @@
   </main>
 
   <script>
-    // small helpers
-    document.getElementById('year').innerText = new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.getElementById('year').innerText = new Date().getFullYear();
+
+      const PROJECTS = {
+        kinesis: {
+          title: 'AWS Kinesis Live Streaming + WebRTC (IoT Video Pipeline)',
+          role: 'Mobile Developer — handled entire pipeline independently',
+          tech: 'Flutter, AWS Kinesis Video Streams, WebRTC, RTSP, CloudWatch, IAM',
+          duration: '6 months',
+          desc: `This project was originally considered a failure — the senior engineering team could not stabilise the live streaming pipeline. I requested permission to attempt it despite limited experience and, within one week, implemented WebRTC signalling and SDP exchange, stabilised producer–consumer communication, handled ICE candidates, designed fail-safe reconnection logic, reduced frame drops and latency, integrated token-based authentication, and built CloudWatch monitoring and alerts.`,
+          impact: 'Converted a failed project into a production-grade system with ~99% uptime and reduced dependency on external support.',
+          android: '',
+          ios: '',
+          thumb: 'KS'
+        },
+        ble: {
+          title: 'BLE Communication System for IoT Hardware',
+          role: 'Mobile App Developer',
+          tech: 'Flutter, Platform Channels, BLE (GATT)',
+          duration: '3 months',
+          desc: `Assigned during probation, I designed and delivered a complete BLE pipeline: scanning, pairing, secure bonding, read/write on characteristics, stable real-time sensor streaming, a custom retry + timeout framework, automatic reconnection, and error handling for fragmented packets.`,
+          impact: 'The BLE module became the foundation for future products — minimal disconnections and a production-ready BLE stack.',
+          android: 'https://play.google.com/store/apps/details?id=com.themarineguardian.app',
+          ios: 'https://apps.apple.com/gr/app/tmg-bt/id6448838544',
+          thumb: 'BLE'
+        },
+        dashboard: {
+          title: 'TMG Dashboard App – Multi-Version IoT Integration',
+          role: 'Lead Mobile Developer',
+          tech: 'Flutter, MQTT, Socket.IO, UDP/TCP parsing, GetX, Node.js, MongoDB',
+          duration: '1.5 years',
+          desc: `Built the entire TMG Dashboard from scratch: login/onboarding, real-time boat tracking, dynamic sensor dashboards, alerts & alarms, notifications, i18n, device pairing and offline fallbacks. Redesigned architecture to support hardware v1→v3 with schema-driven parsing.`,
+          impact: 'One app now supports three hardware generations and reduced polling to socket-driven realtime updates.',
+          android: 'https://play.google.com/store/apps/details?id=com.themarineguardiandashboard.app',
+          ios: 'https://apps.apple.com/gr/app/tmg-dash/id6450049327',
+          thumb: 'MD'
+        },
+        n2k: {
+          title: 'NMEA 2000 Dynamic Packet Parsing System (Marine Protocol)',
+          role: 'Senior Developer',
+          tech: 'Flutter, Node.js, MongoDB, Custom PGN Schema Engine',
+          duration: '',
+          desc: `Rather than hardcoding every PGN, I proposed and proved a dynamic DB-driven PGN schema that maps start index, byte length, types, scaling and units. Mobile and backend parse packets using the same schema, with validation layers to detect malformed packets.`,
+          impact: 'Eliminated repetitive code, enabled fast PGN additions via DB entries, and improved maintainability across mobile and backend.',
+          android: '',
+          ios: '',
+          thumb: 'N2K'
+        }
+      };
+
+      const modalBackdrop = document.getElementById('projectModal');
+      const modalClose = document.getElementById('modalClose');
+
+      function openModal(key){
+        const data = PROJECTS[key];
+        if(!data) return;
+        document.getElementById('modalTitle').innerText = data.title;
+        document.getElementById('modalRole').innerText = data.role;
+        document.getElementById('modalTech').innerText = 'Tech: ' + data.tech;
+        document.getElementById('modalDuration').innerText = data.duration ? 'Duration: ' + data.duration : '';
+        document.getElementById('modalDesc').innerText = data.desc;
+        document.getElementById('modalImpact').innerText = 'Impact: ' + data.impact;
+        document.getElementById('modalThumb').innerText = data.thumb;
+        document.getElementById('modalAndroid').href = data.android || '';
+        document.getElementById('modalIos').href = data.ios || '';
+        modalBackdrop.classList.add('show');
+        document.body.classList.add('modal-open');
+        // focus trap start
+        document.getElementById('modalClose').focus();
+      }
+
+      function closeModal(){
+        modalBackdrop.classList.remove('show');
+        document.body.classList.remove('modal-open');
+      }
+
+      document.querySelectorAll('[data-open]').forEach(btn=> btn.addEventListener('click', (e)=>{e.preventDefault();openModal(btn.getAttribute('data-open'));}));
+
+      modalClose.addEventListener('click', closeModal);
+      modalBackdrop.addEventListener('click', (e)=>{ if(e.target === modalBackdrop) closeModal();});
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
+    });
   </script>
 </body>
 </html>
